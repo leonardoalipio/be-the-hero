@@ -3,17 +3,14 @@
 module.exports = {
 
   development: {
-    client: 'mysql',
+    client: 'sqlite3',
     connection: {
-      //connectionString: 'Server=localhost\\SQLEXPRESS;Database=be-the-hero;User Id=dev;Password=123;Integrated Security=True;'
-      host : 'localhost',
-      user : 'dev',
-      password : '123123',
-      database : 'be-the-hero',
+      filename: './src/database/db.sqlite'
     },
     migrations: {
       directory: './src/database/migrations'
-    }
+    },
+    useNullAsDefault: true
   },
 
   staging: {
